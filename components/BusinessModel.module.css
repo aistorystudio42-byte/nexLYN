@@ -1,0 +1,246 @@
+.businessSection {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #0d0a0a;
+    /* Mat siyah karton hissiyatı */
+    color: var(--text);
+    overflow: hidden;
+    border-top: 1px solid rgba(189, 160, 97, 0.1);
+    border-bottom: 1px solid rgba(189, 160, 97, 0.1);
+}
+
+.parchmentOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(189, 160, 97, 0.03) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.introHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.mainTitle {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Steps Flow */
+.stepsFlow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconCircle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(189, 160, 97, 0.05);
+    border: 1px solid rgba(189, 160, 97, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--accent);
+    transition: all 0.4s ease;
+}
+
+.step:hover .iconCircle {
+    transform: scale(1.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px rgba(189, 160, 97, 0.1);
+}
+
+.step h4 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.step p {
+    font-size: 0.95rem;
+    opacity: 0.6;
+    line-height: 1.5;
+}
+
+.stepConnector {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(189, 160, 97, 0.2), transparent);
+    flex: 0.5;
+    margin-top: 40px;
+}
+
+.communicationNote {
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.5;
+    margin-bottom: 80px;
+}
+
+/* Pricing Grid */
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.pricingCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(189, 160, 97, 0.1);
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.pricingCard:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    background: rgba(189, 160, 97, 0.03);
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.premiumBadge {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.cardTitle {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.priceLabel {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.priceValue {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 30px;
+}
+
+.currency {
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.features li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(189, 160, 97, 0.05);
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+/* CTA Button */
+.ctaWrapper {
+    text-align: center;
+}
+
+.megaButton {
+    display: inline-block;
+    padding: 24px 60px;
+    background: #9e1b1b;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(158, 27, 27, 0.5);
+}
+
+.megaButton:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    background: #b01a1a;
+}
+
+@media (max-width: 1024px) {
+    .pricingGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricingGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .stepsFlow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stepConnector {
+        display: none;
+    }
+
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+}

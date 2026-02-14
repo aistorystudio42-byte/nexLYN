@@ -1,0 +1,129 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    height: clamp(70px, 10vh, 90px);
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(189, 160, 97, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(1rem, 5vw, 4rem);
+    box-sizing: border-box;
+    transition: var(--transition-luxury);
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.navLink {
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--font-playfair);
+    font-size: 1.05rem;
+    transition: var(--transition-luxury);
+    padding: 10px 0;
+    position: relative;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--primary);
+    transition: var(--transition-luxury);
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.active {
+    color: var(--primary);
+}
+
+.active::after {
+    width: 100%;
+}
+
+.authSection {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profileInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profileImage {
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    object-fit: cover;
+    transition: var(--transition-luxury);
+}
+
+.logoutButton {
+    background: transparent;
+    border: 1px solid rgba(193, 18, 31, 0.3);
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-luxury);
+    text-transform: uppercase;
+    min-height: 44px;
+}
+
+.logoutButton:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.logoutButton:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 1.5rem;
+    }
+
+    .logoContainer img {
+        width: 120px !important;
+    }
+
+    .nav {
+        display: none;
+        /* Mobile menu should be implemented usually, but following the grid request primarily */
+    }
+}

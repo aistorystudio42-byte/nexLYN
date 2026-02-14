@@ -1,0 +1,25 @@
+.button {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    color: var(--text);
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    outline: none;
+}
+
+.button:hover {
+    opacity: 1;
+    background: rgba(193, 18, 31, 0.05);
+    box-shadow: 0 4px 12px rgba(193, 18, 31, 0.1);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
