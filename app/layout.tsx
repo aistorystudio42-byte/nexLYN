@@ -3,7 +3,6 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/site/Header";
 import Background from "@/components/site/Background";
-import SupportButton from "@/components/site/SupportButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -26,7 +25,6 @@ export default function RootLayout({
                 <main className="min-h-screen reveal-up">
                     {children}
                 </main>
-                <SupportButton />
             </body>
         </html>
     );

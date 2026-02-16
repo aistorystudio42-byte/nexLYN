@@ -85,9 +85,9 @@ export default function SupportPage({ initialContent }: { initialContent: any })
                 <p className="text-ivory/40 text-sm max-w-xl mx-auto italic font-sans">
                     Teknik ekibimize doğrudan ulaşmak ve özel durumlarınız için destek almak için resmi iletişim kanallarımızı kullanabilirsiniz.
                 </p>
-                <div className="pt-4">
-                    <button className="px-16 py-4 bg-bronze text-ivory text-[10px] tracking-[0.5em] font-bold uppercase hover:bg-bronze-light transition-all shadow-2xl shadow-bronze/20 border border-bronze-light/30">
-                        İLETİŞİME GEÇ
+                <div className="pt-4 flex justify-center">
+                    <button className="premium-button !bg-bronze !text-ivory !border-bronze-light/30">
+                        <span>İLETİŞİME GEÇ</span>
                     </button>
                 </div>
             </div>

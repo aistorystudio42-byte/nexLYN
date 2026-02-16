@@ -54,8 +54,8 @@ export default async function KuluplerimPage() {
                         <p className="text-ivory/40 font-sans italic mb-10 max-w-md">
                             Kendi topluluğunu kurmak için moderatör onayı alman gerekiyor. Arşivdeki diğer kulüpleri incelemek ister misin?
                         </p>
-                        <Link href="/kesfet" className="px-10 py-4 bg-bronze/10 border border-bronze/30 text-bronze-light text-[11px] tracking-[0.3em] uppercase hover:bg-bronze hover:text-ivory transition-all">
-                            ARŞİVİ KEŞFET
+                        <Link href="/kesfet" className="premium-button !px-10 !py-4 !bg-bronze/10 !border-bronze/30 !text-bronze-light hover:!text-ivory">
+                            <span>ARŞİVİ KEŞFET</span>
                         </Link>
                     </div>
                 )}

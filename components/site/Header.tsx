@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Search, ChevronDown } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
+import SupportButton from './SupportButton'
 
 export default async function Header() {
     const supabase = createClient()
@@ -39,6 +40,7 @@ export default async function Header() {
             </div>
 
             <div className="flex items-center gap-8">
+                <SupportButton />
                 <Link
                     href="/giris"
                     className="premium-button !py-1.5 !px-6"
